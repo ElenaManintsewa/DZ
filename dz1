@@ -1,0 +1,19 @@
+ouf=open('parol.txt','w')
+
+import random
+
+l = '_/\|QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890'
+r = 'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮйцукенгшщзхъфывапролджэячсмитьбю'
+y = str(input('Использовать кириллицу?'+ "\n"))
+d = int(input('длина пароля?'+ "\n"))
+if (y=='Да'):
+    password =''
+    for i in range(d):
+        password += random.choice(l+r)
+    ouf.write(str(password))
+else:
+    password =''
+    for i in range(d):
+        password += random.choice(l)
+    ouf.write(str(password))
+ouf.close()
